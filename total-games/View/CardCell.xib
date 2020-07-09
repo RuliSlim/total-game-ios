@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryItem" id="gTV-IL-0wX" customClass="CardCell" customModule="total_games" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="355" height="377"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="355" height="377"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YeI-7H-PLX" customClass="CardBody" customModule="total_games" customModuleProvider="target">
+                        <rect key="frame" x="5" y="5" width="345" height="367"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pc" translatesAutoresizingMaskIntoConstraints="NO" id="vMi-Jx-T4E" customClass="CardImage" customModule="total_games" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="325" height="257"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dVP-CC-3cc">
+                                <rect key="frame" x="0.0" y="239" width="345" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal Computer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Qzm-nF-cLB">
+                                        <rect key="frame" x="10" y="51.666666666666686" width="325" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="QfH-tX-DHl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Total Games:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1d0-KC-bMz">
+                                        <rect key="frame" x="10" y="76.666666666666686" width="87" height="16.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3949" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Tix-li-tmD">
+                                        <rect key="frame" x="299" y="76.666666666666686" width="36" height="16.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Qzm-nF-cLB" firstAttribute="centerY" secondItem="dVP-CC-3cc" secondAttribute="centerY" id="7Bk-Rr-h9S"/>
+                                    <constraint firstItem="1d0-KC-bMz" firstAttribute="leading" secondItem="dVP-CC-3cc" secondAttribute="leading" constant="10" id="Fdm-Uo-tv9"/>
+                                    <constraint firstItem="Tix-li-tmD" firstAttribute="top" secondItem="Qzm-nF-cLB" secondAttribute="bottom" id="M7b-F3-fPK"/>
+                                    <constraint firstAttribute="trailing" secondItem="Qzm-nF-cLB" secondAttribute="trailing" constant="10" id="hGq-Pc-5uV"/>
+                                    <constraint firstItem="Qzm-nF-cLB" firstAttribute="leading" secondItem="dVP-CC-3cc" secondAttribute="leading" constant="10" id="q9J-Zi-3fN"/>
+                                    <constraint firstItem="1d0-KC-bMz" firstAttribute="top" secondItem="Qzm-nF-cLB" secondAttribute="bottom" id="tXf-80-zfW"/>
+                                    <constraint firstAttribute="trailing" secondItem="Tix-li-tmD" secondAttribute="trailing" constant="10" id="yKf-zx-JsN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="dVP-CC-3cc" secondAttribute="trailing" id="3pj-x1-Zfc"/>
+                            <constraint firstItem="dVP-CC-3cc" firstAttribute="height" secondItem="YeI-7H-PLX" secondAttribute="height" multiplier="0.348774" id="SuS-21-opo"/>
+                            <constraint firstItem="dVP-CC-3cc" firstAttribute="leading" secondItem="YeI-7H-PLX" secondAttribute="leading" id="XIn-VI-HRh"/>
+                            <constraint firstItem="vMi-Jx-T4E" firstAttribute="height" secondItem="YeI-7H-PLX" secondAttribute="height" multiplier="0.7" id="ZGV-yc-6Ua"/>
+                            <constraint firstAttribute="trailing" secondItem="vMi-Jx-T4E" secondAttribute="trailing" constant="10" id="cNV-la-2Q5"/>
+                            <constraint firstAttribute="bottom" secondItem="dVP-CC-3cc" secondAttribute="bottom" id="cVe-ya-djS"/>
+                            <constraint firstItem="vMi-Jx-T4E" firstAttribute="leading" secondItem="YeI-7H-PLX" secondAttribute="leading" constant="10" id="nKk-0Z-Bn5"/>
+                            <constraint firstItem="vMi-Jx-T4E" firstAttribute="top" secondItem="YeI-7H-PLX" secondAttribute="top" constant="10" id="qDD-Ao-Hqu"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="YeI-7H-PLX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="9mL-ut-v3d"/>
+                <constraint firstItem="YeI-7H-PLX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="btl-cs-x1T"/>
+                <constraint firstAttribute="trailing" secondItem="YeI-7H-PLX" secondAttribute="trailing" constant="5" id="jIe-pd-a2T"/>
+                <constraint firstAttribute="bottom" secondItem="YeI-7H-PLX" secondAttribute="bottom" constant="5" id="lgg-3b-SIk"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="355" height="377"/>
+            <connections>
+                <outlet property="cardImage" destination="vMi-Jx-T4E" id="lXG-tN-rLT"/>
+                <outlet property="title" destination="Qzm-nF-cLB" id="G2U-qb-rdC"/>
+                <outlet property="totalGames" destination="Tix-li-tmD" id="ogW-Ko-coX"/>
+            </connections>
+            <point key="canvasLocation" x="263.4375" y="80.625"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="pc" width="1920" height="620"/>
+    </resources>
+</document>
