@@ -22,8 +22,8 @@ class CardCell: UICollectionViewCell {
     }
     
     public func configure(with card: Category) {
-        cardImage.image = UIImage(named: card.image)
-        totalGames.text = String(card.games)
+//        cardImage.image = UIImage(named: card.image)
+        totalGames.text = String(card.games_count)
         title.text = card.name
     }
     
@@ -35,7 +35,7 @@ class CardCell: UICollectionViewCell {
         self.layer.masksToBounds = false
         self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowOpacity = 0.4
-        self.layer.shadowOffset = .init(width: 10, height: 10)
+        self.layer.shadowOffset = .init(width: 5, height: 5)
         self.layer.shadowRadius = 3
         self.layer.cornerRadius = 10
     }

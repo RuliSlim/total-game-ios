@@ -17,16 +17,16 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YeI-7H-PLX" customClass="CardBody" customModule="total_games" customModuleProvider="target">
-                        <rect key="frame" x="5" y="5" width="345" height="367"/>
+                        <rect key="frame" x="0.0" y="0.0" width="355" height="377"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pc" translatesAutoresizingMaskIntoConstraints="NO" id="vMi-Jx-T4E" customClass="CardImage" customModule="total_games" customModuleProvider="target">
-                                <rect key="frame" x="10" y="10" width="325" height="257"/>
+                                <rect key="frame" x="10" y="10" width="335" height="264"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dVP-CC-3cc">
-                                <rect key="frame" x="0.0" y="239" width="345" height="128"/>
+                                <rect key="frame" x="0.0" y="245.66666666666663" width="355" height="131.33333333333337"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal Computer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Qzm-nF-cLB">
-                                        <rect key="frame" x="10" y="51.666666666666686" width="325" height="25"/>
+                                        <rect key="frame" x="10" y="53.000000000000028" width="335" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="QfH-tX-DHl"/>
                                         </constraints>
@@ -35,13 +35,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Total Games:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1d0-KC-bMz">
-                                        <rect key="frame" x="10" y="76.666666666666686" width="87" height="16.333333333333329"/>
+                                        <rect key="frame" x="10" y="78.000000000000028" width="87" height="16.333333333333329"/>
                                         <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3949" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Tix-li-tmD">
-                                        <rect key="frame" x="299" y="76.666666666666686" width="36" height="16.333333333333329"/>
+                                        <rect key="frame" x="309" y="78.000000000000028" width="36" height="16.333333333333329"/>
                                         <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -72,10 +72,10 @@
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="YeI-7H-PLX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="9mL-ut-v3d"/>
-                <constraint firstItem="YeI-7H-PLX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="btl-cs-x1T"/>
-                <constraint firstAttribute="trailing" secondItem="YeI-7H-PLX" secondAttribute="trailing" constant="5" id="jIe-pd-a2T"/>
-                <constraint firstAttribute="bottom" secondItem="YeI-7H-PLX" secondAttribute="bottom" constant="5" id="lgg-3b-SIk"/>
+                <constraint firstItem="YeI-7H-PLX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="9mL-ut-v3d"/>
+                <constraint firstItem="YeI-7H-PLX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="btl-cs-x1T"/>
+                <constraint firstAttribute="trailing" secondItem="YeI-7H-PLX" secondAttribute="trailing" id="jIe-pd-a2T"/>
+                <constraint firstAttribute="bottom" secondItem="YeI-7H-PLX" secondAttribute="bottom" id="lgg-3b-SIk"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="355" height="377"/>
@@ -84,7 +84,7 @@
                 <outlet property="title" destination="Qzm-nF-cLB" id="G2U-qb-rdC"/>
                 <outlet property="totalGames" destination="Tix-li-tmD" id="ogW-Ko-coX"/>
             </connections>
-            <point key="canvasLocation" x="263.4375" y="80.625"/>
+            <point key="canvasLocation" x="261.59420289855075" y="80.022321428571431"/>
         </collectionViewCell>
     </objects>
     <resources>

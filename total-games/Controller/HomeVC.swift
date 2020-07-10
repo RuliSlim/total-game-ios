@@ -10,59 +10,63 @@ import UIKit
 
 class HomeVC: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var prevButton: UIButton!
+    @IBOutlet weak var header: UIView!
+    @IBOutlet weak var footer: UIView!
     
-    var categoeries: [Category] = [
-        Category(id: 1, image: "pc", name: "PC", games: 234),
-        Category(id: 2, image: "pc", name: "PS4", games: 2455),
-        Category(id: 2, image: "pc", name: "PS4", games: 2455),
-        Category(id: 2, image: "pc", name: "PS4", games: 2455),
-        Category(id: 2, image: "pc", name: "PS4", games: 2455),
-        Category(id: 2, image: "pc", name: "PS4", games: 2455),
-        Category(id: 2, image: "pc", name: "PS4", games: 2455),
-        Category(id: 2, image: "pc", name: "PS4", games: 2455),
-        Category(id: 2, image: "pc", name: "PS4", games: 2455),
-        Category(id: 2, image: "pc", name: "PS4", games: 2455),
-        Category(id: 2, image: "pc", name: "PS4", games: 2455),
-        Category(id: 2, image: "pc", name: "PS4", games: 2455),
-        Category(id: 2, image: "pc", name: "PS4", games: 2455),
-        Category(id: 2, image: "pc", name: "PS4", games: 2455),
-        Category(id: 2, image: "pc", name: "PS4", games: 2455),
-        Category(id: 2, image: "pc", name: "PS4", games: 2455),
-        Category(id: 2, image: "pc", name: "PS4", games: 2455),
-        Category(id: 2, image: "pc", name: "PS4", games: 2455),
-        Category(id: 2, image: "pc", name: "PS4", games: 2455),
-        Category(id: 2, image: "pc", name: "PS4", games: 2455),
-        Category(id: 2, image: "pc", name: "PS4", games: 2455),
-        Category(id: 2, image: "pc", name: "PS4", games: 2455),
-        Category(id: 2, image: "pc", name: "PS4", games: 2455)
-    ]
+    private var categoeries: [Category] = []
+    private var currentPage: Int = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let layout = UICollectionViewFlowLayout()
-//        layout.itemSize = CGSize(width: 150, height: 150)
-        collectionView.collectionViewLayout = layout
-        
         collectionView.register(CardCell.nib(), forCellWithReuseIdentifier: CardCell.identifier)
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        getData(page: currentPage)
+    }
+    
+    @IBAction func nextPage(_ sender: UIButton) {
+        currentPage += 1
+        getData(page: currentPage)
+    }
+    
+    @IBAction func prevPage(_ sender: UIButton) {
+        currentPage -= 1
+        getData(page: currentPage)
+    }
+    
+    
+    private func getData(page: Int) {
+        Api.shared.column = 2
+        Api.shared.page = page
+        Api.shared.getCategory { (res) in
+            switch res {
+            case .success(let data):
+                DispatchQueue.main.async {
+                    self.categoeries = data.0
+                    self.collectionView.reloadData()
+                    if data.1 != nil {
+                        self.nextButton.isHidden = false
+                    } else {
+                        self.nextButton.isHidden = true
+                    }
+                    if data.2 != nil {
+                        self.prevButton.isHidden = false
+                    } else {
+                        self.prevButton.isHidden = true
+                    }
+                }
+            case .failure(let err):
+                print(err, "ini eroor")
+            }
+        }
     }
 }
 
 extension HomeVC: UICollectionViewDelegate {
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        if let cell = collectionView.cellForItem(at: indexPath) as? CardCell {
-//            cell.didTapped()
-//        }
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-//        if let cell = collectionView.cellForItem(at: indexPath) as? CardCell {
-//            cell.setUpCardBody()
-//        }
-//    }
-    
     func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
                 if let cell = collectionView.cellForItem(at: indexPath) as? CardCell {
             cell.didTapped()
@@ -75,17 +79,11 @@ extension HomeVC: UICollectionViewDelegate {
         }
     }
     
-//    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardCell.identifier, for: indexPath) as! CardCell
-//        cell.didTapped()
-//    }
-    
-    
 }
 
 extension HomeVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
+        return categoeries.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -104,6 +102,16 @@ extension HomeVC: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 12.5, left: 12.5, bottom: 12.5, right: 12.5)
+        let rowCount: CGFloat = CGFloat(categoeries.count / 2)
+        let cellWidth = (view.frame.size.width / 2 - 20) * rowCount
+        var top: CGFloat!
+
+        if cellWidth < collectionView.frame.size.height {
+            top = (collectionView.frame.size.height - cellWidth) / 2
+        } else {
+            top = 10
+        }
+        
+        return UIEdgeInsets(top: top, left: 10, bottom: 0, right: 10)
     }
 }
