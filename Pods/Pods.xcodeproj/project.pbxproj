@@ -1,0 +1,841 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		08FBBFAC3AEE37996B281C4ACB021178 /* Pods-total-games-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B7F171031FC6F0145DAFF54176D2E851 /* Pods-total-games-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C1C728998AB799AC244F7ED9BA4B1BB /* CGImageSource+ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EEE7CDBEC32C5A4C128670056EF430 /* CGImageSource+ImageLoader.swift */; };
+		0DEB889CADE5473AB140BDB336B66E78 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		1502C3B5730D80705F0F29615F0DBC1D /* UIImageView+ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5818379A6A00365170DC17DB1BEDE2F7 /* UIImageView+ImageLoader.swift */; };
+		168D399EF67DF93D60B6E5C2D36DFDB4 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0106BE345CA3F9E85FA898D0CB4253C6 /* Option.swift */; };
+		1DA9069C377D38F66582B7DC30B8A00B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		22068882F9F79FACADE8B6C5D3AB50C2 /* URLLiteralConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF1B7E62A16203308082512FE82F14E /* URLLiteralConvertible.swift */; };
+		2764E53847A07485C74C4940F35CC844 /* Operative.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DA9F41797F1F4757BF1D71A8DC7EC4 /* Operative.swift */; };
+		4EA9AEB021B4586048B34AF4030FAF31 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1959F270C81FDB013BFDA3E23B7CFF2E /* GradientView.swift */; };
+		5CECB957C537B7D9CCD41FDA0FBF645C /* HashStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1592D17535523EEAB21557BF7280B8FE /* HashStorage.swift */; };
+		6E862CC41FC47997D7371636D5B14F0D /* ImageLoader-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A471F3B1BB54CE2EBE342B80D2D2F82 /* ImageLoader-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7720BF30F0F79A212265B98168983FFA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
+		852DD6324AC6921FD301D4E58A9EC5E0 /* Disk.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2748C6407F80F9C9D48C9E74FDDBE28 /* Disk.swift */; };
+		91E889574F0FC4430BDF7CA91CCF6DBE /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F7837794170D3408E4F5F5466F23B8 /* Loader.swift */; };
+		9E774B2C215F27698B2EB1CFE441C8D7 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBB23F0FA3B08CB786D305FFB96908B /* ImageLoader.swift */; };
+		AA9F530007101AD495BC1369B6773C97 /* Pods-total-games-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0502C77D5A47B393D54BE6535BC76800 /* Pods-total-games-dummy.m */; };
+		B9B183E2408CDA0C82B7CC2045B5856E /* UIImage+ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49958574F7977DF8427C3042976D3094 /* UIImage+ImageLoader.swift */; };
+		C1D973FE796386657826BF35D971552F /* GradientView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 06EB170B99D990FDD36803694A1818E4 /* GradientView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C1DCAFA78F691AB24596519966694BD3 /* Data+ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DED95D81F8004641714D40AA4256D0 /* Data+ImageLoader.swift */; };
+		D5586869D341D1EEA5505D03D90408BA /* GradientView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 532B0B03E240D322DC2153A1236617DB /* GradientView-dummy.m */; };
+		D91C88E05B479FE84073AE817371F76E /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79754836FA01D32A878D59F89CE95032 /* Loadable.swift */; };
+		E2743335ABCC4893C9DF35F06E818681 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		F540EA9C871F750BEC5E1E3DBE654D93 /* ImageLoader-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AADFFCD31C377D61928786B5A4581ED9 /* ImageLoader-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		170F0A601FDDF0AAD73C23F8BF753AB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 269D828BFEDDD2E14A9BC55D5D392757;
+			remoteInfo = ImageLoader;
+		};
+		CB6242668FD8A24215633B74E9685290 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2A98E6927D60A98C25CDB1CE75881844;
+			remoteInfo = GradientView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0106BE345CA3F9E85FA898D0CB4253C6 /* Option.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Option.swift; path = ImageLoader/Core/Option.swift; sourceTree = "<group>"; };
+		0502C77D5A47B393D54BE6535BC76800 /* Pods-total-games-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-total-games-dummy.m"; sourceTree = "<group>"; };
+		06EB170B99D990FDD36803694A1818E4 /* GradientView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GradientView-umbrella.h"; sourceTree = "<group>"; };
+		10449EACBDF76CB1608A357FF7D99440 /* Pods-total-games-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-total-games-acknowledgements.plist"; sourceTree = "<group>"; };
+		1592D17535523EEAB21557BF7280B8FE /* HashStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HashStorage.swift; path = ImageLoader/Core/HashStorage.swift; sourceTree = "<group>"; };
+		1959F270C81FDB013BFDA3E23B7CFF2E /* GradientView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientView.swift; path = Sources/GradientView/GradientView.swift; sourceTree = "<group>"; };
+		237BDD45E4338C2EBE2F70996BD1250F /* GradientView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GradientView.debug.xcconfig; sourceTree = "<group>"; };
+		312B988EF117AE4DE76A268D970131FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		3654C92320AA38FACE439ED8048126DA /* GradientView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GradientView-Info.plist"; sourceTree = "<group>"; };
+		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		49958574F7977DF8427C3042976D3094 /* UIImage+ImageLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+ImageLoader.swift"; path = "ImageLoader/Extension/UIImage+ImageLoader.swift"; sourceTree = "<group>"; };
+		532B0B03E240D322DC2153A1236617DB /* GradientView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GradientView-dummy.m"; sourceTree = "<group>"; };
+		54DED95D81F8004641714D40AA4256D0 /* Data+ImageLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+ImageLoader.swift"; path = "ImageLoader/Extension/Data+ImageLoader.swift"; sourceTree = "<group>"; };
+		553E52842154A4ED59F88BA9CBDF8ED0 /* Pods_total_games.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_total_games.framework; path = "Pods-total-games.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5818379A6A00365170DC17DB1BEDE2F7 /* UIImageView+ImageLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+ImageLoader.swift"; path = "ImageLoader/Extension/UIImageView+ImageLoader.swift"; sourceTree = "<group>"; };
+		58EEE7CDBEC32C5A4C128670056EF430 /* CGImageSource+ImageLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGImageSource+ImageLoader.swift"; path = "ImageLoader/Extension/CGImageSource+ImageLoader.swift"; sourceTree = "<group>"; };
+		5BF1B7E62A16203308082512FE82F14E /* URLLiteralConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLLiteralConvertible.swift; path = ImageLoader/Core/URLLiteralConvertible.swift; sourceTree = "<group>"; };
+		6430AC4308989BEE61614C0398C1DC06 /* Pods-total-games.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-total-games.modulemap"; sourceTree = "<group>"; };
+		64B6F8C94A9EB85F3A9C7B5CCEA82A5D /* Pods-total-games.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-total-games.release.xcconfig"; sourceTree = "<group>"; };
+		66DCEE362BF8D47989E1795F0C93670D /* Pods-total-games-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-total-games-frameworks.sh"; sourceTree = "<group>"; };
+		6BDF51145B3D77B70EFB397A822F32D4 /* GradientView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GradientView.release.xcconfig; sourceTree = "<group>"; };
+		79754836FA01D32A878D59F89CE95032 /* Loadable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Loadable.swift; path = ImageLoader/Core/Loadable.swift; sourceTree = "<group>"; };
+		7E8AF3FE7D7CF3339961B50BF6F2C120 /* Pods-total-games.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-total-games.debug.xcconfig"; sourceTree = "<group>"; };
+		86B314501E7A61151C5544461D41B3D7 /* Pods-total-games-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-total-games-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9A471F3B1BB54CE2EBE342B80D2D2F82 /* ImageLoader-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ImageLoader-umbrella.h"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A1F7837794170D3408E4F5F5466F23B8 /* Loader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Loader.swift; path = ImageLoader/Core/Loader.swift; sourceTree = "<group>"; };
+		A487E0CD825D8CCA727D36A85FAD1431 /* ImageLoader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ImageLoader.framework; path = ImageLoader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AADFFCD31C377D61928786B5A4581ED9 /* ImageLoader-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ImageLoader-dummy.m"; sourceTree = "<group>"; };
+		B2748C6407F80F9C9D48C9E74FDDBE28 /* Disk.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Disk.swift; path = ImageLoader/Core/Disk.swift; sourceTree = "<group>"; };
+		B36303863DE279C9249DCD63CAA72D7D /* ImageLoader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ImageLoader.release.xcconfig; sourceTree = "<group>"; };
+		B7F171031FC6F0145DAFF54176D2E851 /* Pods-total-games-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-total-games-umbrella.h"; sourceTree = "<group>"; };
+		D6DA9F41797F1F4757BF1D71A8DC7EC4 /* Operative.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operative.swift; path = ImageLoader/Core/Operative.swift; sourceTree = "<group>"; };
+		DD542AB59F6028096D400AC8352EECF7 /* Pods-total-games-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-total-games-Info.plist"; sourceTree = "<group>"; };
+		DE7614A12CF4CA4AE85E6C4E1C3CFA3B /* GradientView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GradientView.modulemap; sourceTree = "<group>"; };
+		E41274F7270695875CAD599B469EDE58 /* ImageLoader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ImageLoader.debug.xcconfig; sourceTree = "<group>"; };
+		E4644BF48326B674E00FA76B2CEACB10 /* GradientView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GradientView-prefix.pch"; sourceTree = "<group>"; };
+		EA3AE44250163ADF8E4FFCC37325846D /* GradientView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GradientView.framework; path = GradientView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECBB23F0FA3B08CB786D305FFB96908B /* ImageLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageLoader.swift; path = ImageLoader/Core/ImageLoader.swift; sourceTree = "<group>"; };
+		FA4FA921270B31D2B8A00F5C6C906B42 /* ImageLoader-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ImageLoader-prefix.pch"; sourceTree = "<group>"; };
+		FCBE0AC8ACCCD76316871F8EB90C216D /* ImageLoader.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ImageLoader.modulemap; sourceTree = "<group>"; };
+		FDB58DD3F0A42C60E2E8DCDD72CD43D5 /* ImageLoader-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ImageLoader-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5D3BDA6167BA3C6D8606DC24615472D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DEB889CADE5473AB140BDB336B66E78 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B50CC9F2323A9D534911ED575267CF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2743335ABCC4893C9DF35F06E818681 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED7E7D4FAEA9BF655097BEA6480906F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DA9069C377D38F66582B7DC30B8A00B /* Foundation.framework in Frameworks */,
+				7720BF30F0F79A212265B98168983FFA /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0FEA0E66BE786A3C48BC56CFBFA915CD /* Pods-total-games */ = {
+			isa = PBXGroup;
+			children = (
+				6430AC4308989BEE61614C0398C1DC06 /* Pods-total-games.modulemap */,
+				86B314501E7A61151C5544461D41B3D7 /* Pods-total-games-acknowledgements.markdown */,
+				10449EACBDF76CB1608A357FF7D99440 /* Pods-total-games-acknowledgements.plist */,
+				0502C77D5A47B393D54BE6535BC76800 /* Pods-total-games-dummy.m */,
+				66DCEE362BF8D47989E1795F0C93670D /* Pods-total-games-frameworks.sh */,
+				DD542AB59F6028096D400AC8352EECF7 /* Pods-total-games-Info.plist */,
+				B7F171031FC6F0145DAFF54176D2E851 /* Pods-total-games-umbrella.h */,
+				7E8AF3FE7D7CF3339961B50BF6F2C120 /* Pods-total-games.debug.xcconfig */,
+				64B6F8C94A9EB85F3A9C7B5CCEA82A5D /* Pods-total-games.release.xcconfig */,
+			);
+			name = "Pods-total-games";
+			path = "Target Support Files/Pods-total-games";
+			sourceTree = "<group>";
+		};
+		108FFB2840F1EEBE9658A7E86CB7B3F4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA3AE44250163ADF8E4FFCC37325846D /* GradientView.framework */,
+				A487E0CD825D8CCA727D36A85FAD1431 /* ImageLoader.framework */,
+				553E52842154A4ED59F88BA9CBDF8ED0 /* Pods_total_games.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2983683FD097A93297E2F5D4E382B36 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3879973A0F9811119CBB40A749A543F1 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0FEA0E66BE786A3C48BC56CFBFA915CD /* Pods-total-games */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		5233682AFE9A2D51DD894182AC59F2A0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6C9A548C7028E3DBA8D0BA992FC1CC07 /* GradientView */,
+				BD0D69AA1CFF39B3302C6FE80867C579 /* ImageLoader */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		53D4C299D435783E454CBA52D3F8E43A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DE7614A12CF4CA4AE85E6C4E1C3CFA3B /* GradientView.modulemap */,
+				532B0B03E240D322DC2153A1236617DB /* GradientView-dummy.m */,
+				3654C92320AA38FACE439ED8048126DA /* GradientView-Info.plist */,
+				E4644BF48326B674E00FA76B2CEACB10 /* GradientView-prefix.pch */,
+				06EB170B99D990FDD36803694A1818E4 /* GradientView-umbrella.h */,
+				237BDD45E4338C2EBE2F70996BD1250F /* GradientView.debug.xcconfig */,
+				6BDF51145B3D77B70EFB397A822F32D4 /* GradientView.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GradientView";
+			sourceTree = "<group>";
+		};
+		6C9A548C7028E3DBA8D0BA992FC1CC07 /* GradientView */ = {
+			isa = PBXGroup;
+			children = (
+				1959F270C81FDB013BFDA3E23B7CFF2E /* GradientView.swift */,
+				53D4C299D435783E454CBA52D3F8E43A /* Support Files */,
+			);
+			name = GradientView;
+			path = GradientView;
+			sourceTree = "<group>";
+		};
+		AD9C5757D21418C887D5ED913D6E0716 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FCBE0AC8ACCCD76316871F8EB90C216D /* ImageLoader.modulemap */,
+				AADFFCD31C377D61928786B5A4581ED9 /* ImageLoader-dummy.m */,
+				FDB58DD3F0A42C60E2E8DCDD72CD43D5 /* ImageLoader-Info.plist */,
+				FA4FA921270B31D2B8A00F5C6C906B42 /* ImageLoader-prefix.pch */,
+				9A471F3B1BB54CE2EBE342B80D2D2F82 /* ImageLoader-umbrella.h */,
+				E41274F7270695875CAD599B469EDE58 /* ImageLoader.debug.xcconfig */,
+				B36303863DE279C9249DCD63CAA72D7D /* ImageLoader.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ImageLoader";
+			sourceTree = "<group>";
+		};
+		BD0D69AA1CFF39B3302C6FE80867C579 /* ImageLoader */ = {
+			isa = PBXGroup;
+			children = (
+				58EEE7CDBEC32C5A4C128670056EF430 /* CGImageSource+ImageLoader.swift */,
+				54DED95D81F8004641714D40AA4256D0 /* Data+ImageLoader.swift */,
+				B2748C6407F80F9C9D48C9E74FDDBE28 /* Disk.swift */,
+				1592D17535523EEAB21557BF7280B8FE /* HashStorage.swift */,
+				ECBB23F0FA3B08CB786D305FFB96908B /* ImageLoader.swift */,
+				79754836FA01D32A878D59F89CE95032 /* Loadable.swift */,
+				A1F7837794170D3408E4F5F5466F23B8 /* Loader.swift */,
+				D6DA9F41797F1F4757BF1D71A8DC7EC4 /* Operative.swift */,
+				0106BE345CA3F9E85FA898D0CB4253C6 /* Option.swift */,
+				49958574F7977DF8427C3042976D3094 /* UIImage+ImageLoader.swift */,
+				5818379A6A00365170DC17DB1BEDE2F7 /* UIImageView+ImageLoader.swift */,
+				5BF1B7E62A16203308082512FE82F14E /* URLLiteralConvertible.swift */,
+				AD9C5757D21418C887D5ED913D6E0716 /* Support Files */,
+			);
+			name = ImageLoader;
+			path = ImageLoader;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				5233682AFE9A2D51DD894182AC59F2A0 /* Pods */,
+				108FFB2840F1EEBE9658A7E86CB7B3F4 /* Products */,
+				3879973A0F9811119CBB40A749A543F1 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		E2983683FD097A93297E2F5D4E382B36 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */,
+				312B988EF117AE4DE76A268D970131FE /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1AE033DDCBEC95243AD6C5B9C06F66D6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E862CC41FC47997D7371636D5B14F0D /* ImageLoader-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29C51AD28A418D246D0D665F67436831 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08FBBFAC3AEE37996B281C4ACB021178 /* Pods-total-games-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1D96225BBF81A298A0DB99D86DEA910 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1D973FE796386657826BF35D971552F /* GradientView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		269D828BFEDDD2E14A9BC55D5D392757 /* ImageLoader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1D01244069FCA9AC99D24E030FC41B8 /* Build configuration list for PBXNativeTarget "ImageLoader" */;
+			buildPhases = (
+				1AE033DDCBEC95243AD6C5B9C06F66D6 /* Headers */,
+				49E7371CAE052455A30BAE89C8ACD666 /* Sources */,
+				5D3BDA6167BA3C6D8606DC24615472D0 /* Frameworks */,
+				118997753682D4079A046DDCFFADBA18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImageLoader;
+			productName = ImageLoader;
+			productReference = A487E0CD825D8CCA727D36A85FAD1431 /* ImageLoader.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2A98E6927D60A98C25CDB1CE75881844 /* GradientView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 661DC8E109B1F950E388F98B1E5CCD8C /* Build configuration list for PBXNativeTarget "GradientView" */;
+			buildPhases = (
+				D1D96225BBF81A298A0DB99D86DEA910 /* Headers */,
+				9010E033FC8E3D9CF0B1C94ABD940A08 /* Sources */,
+				ED7E7D4FAEA9BF655097BEA6480906F8 /* Frameworks */,
+				700B3FA15E7E4251FAD7C4A8CC4420A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GradientView;
+			productName = GradientView;
+			productReference = EA3AE44250163ADF8E4FFCC37325846D /* GradientView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B0E8D1A17452BA615BDC1ED216FE9AF2 /* Pods-total-games */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DCF776A29634E8979865DD05E9CB809 /* Build configuration list for PBXNativeTarget "Pods-total-games" */;
+			buildPhases = (
+				29C51AD28A418D246D0D665F67436831 /* Headers */,
+				398736DB43A8174E5FE3E0D8F31B45DD /* Sources */,
+				8B50CC9F2323A9D534911ED575267CF1 /* Frameworks */,
+				BBD9F0DF40DF6AF488696D24DAFC2A67 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5638E1BD9EC4FFDE3174E2FCF9BDDE5A /* PBXTargetDependency */,
+				5387C1A85CAA1A7CDD182CD4E113B8C0 /* PBXTargetDependency */,
+			);
+			name = "Pods-total-games";
+			productName = "Pods-total-games";
+			productReference = 553E52842154A4ED59F88BA9CBDF8ED0 /* Pods_total_games.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 108FFB2840F1EEBE9658A7E86CB7B3F4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2A98E6927D60A98C25CDB1CE75881844 /* GradientView */,
+				269D828BFEDDD2E14A9BC55D5D392757 /* ImageLoader */,
+				B0E8D1A17452BA615BDC1ED216FE9AF2 /* Pods-total-games */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		118997753682D4079A046DDCFFADBA18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		700B3FA15E7E4251FAD7C4A8CC4420A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBD9F0DF40DF6AF488696D24DAFC2A67 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		398736DB43A8174E5FE3E0D8F31B45DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA9F530007101AD495BC1369B6773C97 /* Pods-total-games-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49E7371CAE052455A30BAE89C8ACD666 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C1C728998AB799AC244F7ED9BA4B1BB /* CGImageSource+ImageLoader.swift in Sources */,
+				C1DCAFA78F691AB24596519966694BD3 /* Data+ImageLoader.swift in Sources */,
+				852DD6324AC6921FD301D4E58A9EC5E0 /* Disk.swift in Sources */,
+				5CECB957C537B7D9CCD41FDA0FBF645C /* HashStorage.swift in Sources */,
+				F540EA9C871F750BEC5E1E3DBE654D93 /* ImageLoader-dummy.m in Sources */,
+				9E774B2C215F27698B2EB1CFE441C8D7 /* ImageLoader.swift in Sources */,
+				D91C88E05B479FE84073AE817371F76E /* Loadable.swift in Sources */,
+				91E889574F0FC4430BDF7CA91CCF6DBE /* Loader.swift in Sources */,
+				2764E53847A07485C74C4940F35CC844 /* Operative.swift in Sources */,
+				168D399EF67DF93D60B6E5C2D36DFDB4 /* Option.swift in Sources */,
+				B9B183E2408CDA0C82B7CC2045B5856E /* UIImage+ImageLoader.swift in Sources */,
+				1502C3B5730D80705F0F29615F0DBC1D /* UIImageView+ImageLoader.swift in Sources */,
+				22068882F9F79FACADE8B6C5D3AB50C2 /* URLLiteralConvertible.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9010E033FC8E3D9CF0B1C94ABD940A08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5586869D341D1EEA5505D03D90408BA /* GradientView-dummy.m in Sources */,
+				4EA9AEB021B4586048B34AF4030FAF31 /* GradientView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5387C1A85CAA1A7CDD182CD4E113B8C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ImageLoader;
+			target = 269D828BFEDDD2E14A9BC55D5D392757 /* ImageLoader */;
+			targetProxy = 170F0A601FDDF0AAD73C23F8BF753AB5 /* PBXContainerItemProxy */;
+		};
+		5638E1BD9EC4FFDE3174E2FCF9BDDE5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GradientView;
+			target = 2A98E6927D60A98C25CDB1CE75881844 /* GradientView */;
+			targetProxy = CB6242668FD8A24215633B74E9685290 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		18B8F053CA46210057B7AFB658990EF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E41274F7270695875CAD599B469EDE58 /* ImageLoader.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ImageLoader/ImageLoader-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ImageLoader/ImageLoader-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ImageLoader/ImageLoader.modulemap";
+				PRODUCT_MODULE_NAME = ImageLoader;
+				PRODUCT_NAME = ImageLoader;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4851CA7BE4C75469C41BC7498777292E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64B6F8C94A9EB85F3A9C7B5CCEA82A5D /* Pods-total-games.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-total-games/Pods-total-games-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-total-games/Pods-total-games.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6675055B801334C1027FD8E11F5D6C70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E8AF3FE7D7CF3339961B50BF6F2C120 /* Pods-total-games.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-total-games/Pods-total-games-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-total-games/Pods-total-games.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D4A1151ADB3F7B92311360157447F6B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B36303863DE279C9249DCD63CAA72D7D /* ImageLoader.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ImageLoader/ImageLoader-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ImageLoader/ImageLoader-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ImageLoader/ImageLoader.modulemap";
+				PRODUCT_MODULE_NAME = ImageLoader;
+				PRODUCT_NAME = ImageLoader;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D94B5D3D629E0E6BF8B5C5E2DD3E95A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BDF51145B3D77B70EFB397A822F32D4 /* GradientView.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GradientView/GradientView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GradientView/GradientView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/GradientView/GradientView.modulemap";
+				PRODUCT_MODULE_NAME = GradientView;
+				PRODUCT_NAME = GradientView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DFD9D19FEEBF98DE271D7FBABCB845B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		F3E3BE7BEFC2FACE8D6ACD83D2DAEE22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 237BDD45E4338C2EBE2F70996BD1250F /* GradientView.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GradientView/GradientView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GradientView/GradientView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/GradientView/GradientView.modulemap";
+				PRODUCT_MODULE_NAME = GradientView;
+				PRODUCT_NAME = GradientView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F5F04600F5626DC980F02790D1ED2C19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DCF776A29634E8979865DD05E9CB809 /* Build configuration list for PBXNativeTarget "Pods-total-games" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6675055B801334C1027FD8E11F5D6C70 /* Debug */,
+				4851CA7BE4C75469C41BC7498777292E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFD9D19FEEBF98DE271D7FBABCB845B5 /* Debug */,
+				F5F04600F5626DC980F02790D1ED2C19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		661DC8E109B1F950E388F98B1E5CCD8C /* Build configuration list for PBXNativeTarget "GradientView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3E3BE7BEFC2FACE8D6ACD83D2DAEE22 /* Debug */,
+				D94B5D3D629E0E6BF8B5C5E2DD3E95A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1D01244069FCA9AC99D24E030FC41B8 /* Build configuration list for PBXNativeTarget "ImageLoader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18B8F053CA46210057B7AFB658990EF5 /* Debug */,
+				D4A1151ADB3F7B92311360157447F6B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ImageLoader
 
 @IBDesignable
 class CardCell: UICollectionViewCell {
@@ -22,9 +23,9 @@ class CardCell: UICollectionViewCell {
     }
     
     public func configure(with card: Category) {
-//        cardImage.image = UIImage(named: card.image)
-        totalGames.text = String(card.games_count)
-        title.text = card.name
+        self.totalGames.text = String(card.games_count)
+        self.title.text = card.name
+        self.cardImage.load.request(with: card.image_background)
     }
     
     static func nib() -> UINib {

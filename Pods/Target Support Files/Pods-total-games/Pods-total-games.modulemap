@@ -1,0 +1,6 @@
+framework module Pods_total_games {
+  umbrella header "Pods-total-games-umbrella.h"
+
+  export *
+  module * { export * }
+}
