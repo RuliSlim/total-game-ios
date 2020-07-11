@@ -24,38 +24,6 @@
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Mn3-hU-CWC">
                                 <rect key="frame" x="10" y="262" width="391" height="86"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal Computer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Qzm-nF-cLB">
-                                        <rect key="frame" x="0.0" y="0.0" width="191.5" height="43"/>
-                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uSX-TM-3wf">
-                                        <rect key="frame" x="0.0" y="43" width="391" height="43"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Total Games:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1d0-KC-bMz">
-                                                <rect key="frame" x="0.0" y="0.0" width="355" height="43"/>
-                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3949" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Tix-li-tmD">
-                                                <rect key="frame" x="355" y="0.0" width="36" height="43"/>
-                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="Tix-li-tmD" secondAttribute="trailing" id="SVa-cX-ufo"/>
-                                        </constraints>
-                                    </stackView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="uSX-TM-3wf" secondAttribute="trailing" id="bBq-dq-yvv"/>
-                                    <constraint firstItem="uSX-TM-3wf" firstAttribute="leading" secondItem="Mn3-hU-CWC" secondAttribute="leading" id="e45-r5-4hb"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <constraints>
@@ -82,8 +50,7 @@
             <size key="customSize" width="411" height="353"/>
             <connections>
                 <outlet property="cardImage" destination="vMi-Jx-T4E" id="lXG-tN-rLT"/>
-                <outlet property="title" destination="Qzm-nF-cLB" id="G2U-qb-rdC"/>
-                <outlet property="totalGames" destination="Tix-li-tmD" id="ogW-Ko-coX"/>
+                <outlet property="containerText" destination="Mn3-hU-CWC" id="sEM-9g-zaV"/>
             </connections>
             <point key="canvasLocation" x="302.17391304347831" y="104.79910714285714"/>
         </collectionViewCell>

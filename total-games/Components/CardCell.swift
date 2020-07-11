@@ -9,24 +9,45 @@
 import UIKit
 import ImageLoader
 
-@IBDesignable
 class CardCell: UICollectionViewCell {
     static var identifier = "CategoryItem"
     
     @IBOutlet weak var cardImage: UIImageView!
-    @IBOutlet weak var totalGames: UILabel!
-    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var containerText: UIStackView!
+    
+    var totalGames: UILabel = UILabel()
+    var title: UILabel = UILabel()
     
     override func awakeFromNib() {
         super.awakeFromNib()
         dropShadow()
     }
     
-    public func configure(with card: Category) {
-        self.totalGames.text = String(card.games_count)
-        self.title.text = card.name
-        self.cardImage.load.request(with: card.image_background)
+    private func setup(name: String, games: String) {
+        containerText.addArrangedSubview(self.title)
+        containerText.addArrangedSubview(totalGames)
+        
+        title.translatesAutoresizingMaskIntoConstraints = false
+        title.font = UIFont(name: "AmericanTypewriter-Bold", size: 18)
+        
+        totalGames.translatesAutoresizingMaskIntoConstraints = false
+        totalGames.font = UIFont(name: "AmericanTypewriter-Condensed", size: 16)
+        
+        title.text = "\(name)"
+        totalGames.text = "Games: \(games)"
     }
+    
+    public func configure(with card: Category, type: ContentType) {
+        switch type {
+        case .category:
+            self.cardImage.load.request(with: card.image_background)
+            let game = card.games_count.convertToStringNumber()
+            setup(name: card.name, games: game)
+        case .games:
+            print("s")
+        }
+    }
+    
     
     static func nib() -> UINib {
         return UINib(nibName: "CardCell", bundle: nil)

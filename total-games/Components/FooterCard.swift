@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FooterCard: UICollectionReusableView {
+class FooterCard: UIView {
 
     override func awakeFromNib() {
         super.awakeFromNib()

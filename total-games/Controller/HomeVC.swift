@@ -19,11 +19,8 @@ class HomeVC: UIViewController {
     private var _categoeries: [Category] = []
     private var _currentPage: Int = 1
     
-    private var gradientView = GradientView()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpGradientView()
         
         collectionView.register(CardCell.nib(), forCellWithReuseIdentifier: CardCell.identifier)
         collectionView.delegate = self
@@ -40,23 +37,6 @@ class HomeVC: UIViewController {
     @IBAction func prevPage(_ sender: UIButton) {
         _currentPage -= 1
         getData(page: _currentPage)
-    }
-    
-    private func setUpGradientView() {
-        view.insertSubview(gradientView, belowSubview: header)
-        gradientView.direction = .horizontal
-        gradientView.colors = [
-            #colorLiteral(red: 0.1098039216, green: 0.09803921569, blue: 0.1803921569, alpha: 1),
-            #colorLiteral(red: 0.1254901961, green: 0.1333333333, blue: 0.2078431373, alpha: 1)
-        ]
-        gradientView.translatesAutoresizingMaskIntoConstraints = false
-
-        NSLayoutConstraint.activate([
-            gradientView.topAnchor.constraint(equalTo: view.topAnchor),
-            gradientView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            gradientView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            gradientView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-        ])
     }
     
     private func getData(page: Int) {
@@ -98,6 +78,18 @@ extension HomeVC: UICollectionViewDelegate {
         }
     }
     
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
+        Api.shared.category = _categoeries[indexPath.row].id
+        guard let gameListVC = storyboard?.instantiateViewController(withIdentifier: "GamesListVC") else { return }
+        
+        self.present(gameListVC, animated: true, completion: nil)
+    }
+    
 }
 
 extension HomeVC: UICollectionViewDataSource {
@@ -109,7 +101,7 @@ extension HomeVC: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardCell.identifier, for: indexPath) as! CardCell
         
         let category = _categoeries[indexPath.row]
-        cell.configure(with: category)
+        cell.configure(with: category, type: .category)
         return cell
     }
 }
@@ -117,14 +109,12 @@ extension HomeVC: UICollectionViewDataSource {
 extension HomeVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = view.frame.size.width / 2 - 20
-        return CGSize(width: width, height: width)
+        let height = collectionView.frame.size.height / 3 - 15
+        return CGSize(width: width, height: height)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        let rowCount: CGFloat = CGFloat(_categoeries.count / 2)
-        let cellWidth = (view.frame.size.width / 2 - 20) * rowCount
-        let top: CGFloat = (collectionView.frame.size.height - cellWidth) / 3
         
-        return UIEdgeInsets(top: top, left: 10, bottom: 0, right: 10)
+        return UIEdgeInsets(top: 12.75, left: 12.75, bottom: 0, right: 12.75)
     }
 }
