@@ -16,10 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aME-cN-OEt" customClass="Background" customModule="total_games" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="trK-IT-THO" userLabel="Header" customClass="Header" customModule="total_games" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="89.666666666666671"/>
                                 <subviews>
@@ -87,40 +83,47 @@
                                     <constraint firstItem="iTo-1T-ZA2" firstAttribute="centerX" secondItem="RGv-Wd-TOA" secondAttribute="centerX" id="atd-zQ-cZE"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7z-I1-qQy">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="kIY-nS-R1Y">
+                                        <rect key="frame" x="188.66666666666666" y="429.66666666666669" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="kIY-nS-R1Y" firstAttribute="centerY" secondItem="f7z-I1-qQy" secondAttribute="centerY" id="6Wi-4Q-4xy"/>
+                                    <constraint firstItem="kIY-nS-R1Y" firstAttribute="centerX" secondItem="f7z-I1-qQy" secondAttribute="centerX" id="Bkn-2l-fma"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <constraints>
                             <constraint firstItem="trK-IT-THO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="0GT-pG-Qjf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RGv-Wd-TOA" secondAttribute="trailing" id="5h3-2L-5Uf"/>
-                            <constraint firstAttribute="bottom" secondItem="aME-cN-OEt" secondAttribute="bottom" id="8R3-PR-EdY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ebb-Ri-CmU" secondAttribute="trailing" id="CS1-Zg-5RN"/>
-                            <constraint firstItem="aME-cN-OEt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="FC9-ia-qMG"/>
+                            <constraint firstItem="f7z-I1-qQy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LTS-Fp-6Ku"/>
                             <constraint firstItem="RGv-Wd-TOA" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.075" id="Lfc-Pe-G7V"/>
                             <constraint firstAttribute="trailing" secondItem="trK-IT-THO" secondAttribute="trailing" id="OMS-Op-5Ux">
                                 <variation key="heightClass=compact-widthClass=regular" constant="0.0"/>
                             </constraint>
+                            <constraint firstAttribute="bottom" secondItem="f7z-I1-qQy" secondAttribute="bottom" id="ViK-wF-Ftc"/>
                             <constraint firstItem="ebb-Ri-CmU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cKX-Nk-VfW"/>
                             <constraint firstItem="ebb-Ri-CmU" firstAttribute="top" secondItem="trK-IT-THO" secondAttribute="bottom" id="dNg-23-ulW"/>
                             <constraint firstItem="RGv-Wd-TOA" firstAttribute="top" secondItem="ebb-Ri-CmU" secondAttribute="bottom" id="ePr-oP-g0L"/>
-                            <constraint firstItem="aME-cN-OEt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jZk-8d-9a0"/>
+                            <constraint firstItem="f7z-I1-qQy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fqI-G8-A2i"/>
                             <constraint firstAttribute="bottom" secondItem="RGv-Wd-TOA" secondAttribute="bottom" id="l2q-rD-4bV"/>
                             <constraint firstItem="trK-IT-THO" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="pZh-uZ-DhB"/>
+                            <constraint firstAttribute="trailing" secondItem="f7z-I1-qQy" secondAttribute="trailing" id="r25-Tc-QUZ"/>
                             <constraint firstItem="trK-IT-THO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="snn-tQ-cKh">
                                 <variation key="heightClass=compact-widthClass=regular" constant="0.0"/>
                             </constraint>
                             <constraint firstItem="RGv-Wd-TOA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yGl-On-k5L"/>
-                            <constraint firstAttribute="trailing" secondItem="aME-cN-OEt" secondAttribute="trailing" id="yae-MH-Y5p"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="aME-cN-OEt"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="ebb-Ri-CmU" id="X1k-CD-OTA"/>
-                        <outlet property="footer" destination="RGv-Wd-TOA" id="Z2x-2J-jA8"/>
-                        <outlet property="header" destination="trK-IT-THO" id="Puf-HV-2kn"/>
+                        <outlet property="loading" destination="f7z-I1-qQy" id="CAm-9O-C74"/>
                         <outlet property="nextButton" destination="pqg-hi-RhE" id="eMd-BS-yfj"/>
                         <outlet property="prevButton" destination="Czr-7f-gaY" id="55n-mb-6ZM"/>
                     </connections>
@@ -132,7 +135,7 @@
         <!--Games ListVC-->
         <scene sceneID="846-P4-kax">
             <objects>
-                <viewController storyboardIdentifier="GamesListVC" id="bsA-xn-Owj" customClass="GamesListVC" customModule="total_games" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GamesListVC" modalPresentationStyle="fullScreen" id="bsA-xn-Owj" customClass="GamesListVC" customModule="total_games" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ttm-tC-1NG" customClass="Background" customModule="total_games" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -160,7 +163,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zU1-gv-EQ5" customClass="ContainerCard" customModule="total_games" customModuleProvider="target">
-                                <rect key="frame" x="20" y="155.66666666666666" width="374" height="179.99999999999997"/>
+                                <rect key="frame" x="20" y="155.66666666666663" width="374" height="224"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Top Games 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8nC-fX-MPD">
                                         <rect key="frame" x="10" y="9.9999999999999982" width="161" height="23.333333333333329"/>
@@ -169,9 +172,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vzF-JW-f3b">
-                                        <rect key="frame" x="10" y="43.33333333333335" width="354" height="126.66666666666669"/>
+                                        <rect key="frame" x="10" y="43.333333333333357" width="354" height="170.66666666666663"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="5" minimumInteritemSpacing="5" id="cH1-bB-vxW">
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="W1Y-bE-O01">
                                             <size key="itemSize" width="128" height="128"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -179,10 +182,10 @@
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="TjN-rl-IMa" customClass="CardCell" customModule="total_games" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                <rect key="frame" x="0.0" y="21.333333333333332" width="128" height="127.99999999999997"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="i1Z-Ho-vi5">
-                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="127.99999999999997"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m1e-e5-sth" customClass="CardBody" customModule="total_games" customModuleProvider="target">
@@ -224,52 +227,6 @@
                                                     </constraints>
                                                 </collectionViewCellContentView>
                                             </collectionViewCell>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="5ot-rX-13X" customClass="CardCell" customModule="total_games" customModuleProvider="target">
-                                                <rect key="frame" x="226" y="0.0" width="128" height="128"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zuZ-Q7-sUl">
-                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PKw-Ma-uqu" customClass="CardBody" customModule="total_games" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                                            <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pc" translatesAutoresizingMaskIntoConstraints="NO" id="EPQ-tx-PYH" customClass="CardImage" customModule="total_games" customModuleProvider="target">
-                                                                    <rect key="frame" x="10" y="10" width="108" height="89.666666666666671"/>
-                                                                </imageView>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="FBE-l9-Ba2">
-                                                                    <rect key="frame" x="10" y="104.66666666666667" width="108" height="18.333333333333329"/>
-                                                                    <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personal Computer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pfC-dB-Upf">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="108" height="18.333333333333332"/>
-                                                                            <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="20"/>
-                                                                            <nil key="textColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                    </subviews>
-                                                                </stackView>
-                                                            </subviews>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="128" id="4t1-20-14P"/>
-                                                                <constraint firstItem="EPQ-tx-PYH" firstAttribute="leading" secondItem="PKw-Ma-uqu" secondAttribute="leading" constant="10" id="7am-PK-Bvo"/>
-                                                                <constraint firstAttribute="trailing" secondItem="EPQ-tx-PYH" secondAttribute="trailing" constant="10" id="Kdc-JI-rKn"/>
-                                                                <constraint firstAttribute="height" constant="128" id="Qxe-uh-lfy"/>
-                                                                <constraint firstAttribute="bottom" secondItem="FBE-l9-Ba2" secondAttribute="bottom" constant="5" id="Ust-91-srC"/>
-                                                                <constraint firstAttribute="trailing" secondItem="FBE-l9-Ba2" secondAttribute="trailing" constant="10" id="YNg-Gn-xI0"/>
-                                                                <constraint firstItem="FBE-l9-Ba2" firstAttribute="top" secondItem="EPQ-tx-PYH" secondAttribute="bottom" constant="5" id="cRX-oO-ELR"/>
-                                                                <constraint firstItem="EPQ-tx-PYH" firstAttribute="top" secondItem="PKw-Ma-uqu" secondAttribute="top" constant="10" id="hun-ux-E0m"/>
-                                                                <constraint firstItem="FBE-l9-Ba2" firstAttribute="leading" secondItem="PKw-Ma-uqu" secondAttribute="leading" constant="10" id="meb-fV-M1L"/>
-                                                                <constraint firstItem="EPQ-tx-PYH" firstAttribute="height" secondItem="PKw-Ma-uqu" secondAttribute="height" multiplier="0.7" id="zJY-Ot-gg3"/>
-                                                            </constraints>
-                                                        </view>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstItem="PKw-Ma-uqu" firstAttribute="top" secondItem="zuZ-Q7-sUl" secondAttribute="top" id="MMz-rJ-mTj"/>
-                                                        <constraint firstAttribute="bottom" secondItem="PKw-Ma-uqu" secondAttribute="bottom" id="azG-rd-tMM"/>
-                                                        <constraint firstItem="PKw-Ma-uqu" firstAttribute="leading" secondItem="zuZ-Q7-sUl" secondAttribute="leading" id="lAD-xo-Vyr"/>
-                                                    </constraints>
-                                                </collectionViewCellContentView>
-                                            </collectionViewCell>
                                         </cells>
                                     </collectionView>
                                 </subviews>
@@ -277,29 +234,63 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="vzF-JW-f3b" secondAttribute="trailing" constant="10" id="DtE-sP-TAt"/>
                                     <constraint firstItem="8nC-fX-MPD" firstAttribute="top" secondItem="zU1-gv-EQ5" secondAttribute="top" constant="10" id="G1l-dY-Xak"/>
-                                    <constraint firstAttribute="height" constant="180" id="LQO-85-Q8Y"/>
                                     <constraint firstItem="vzF-JW-f3b" firstAttribute="top" secondItem="8nC-fX-MPD" secondAttribute="bottom" constant="10" id="dgu-hh-MCY"/>
                                     <constraint firstItem="vzF-JW-f3b" firstAttribute="leading" secondItem="zU1-gv-EQ5" secondAttribute="leading" constant="10" id="f9U-tg-oJn"/>
                                     <constraint firstItem="8nC-fX-MPD" firstAttribute="leading" secondItem="zU1-gv-EQ5" secondAttribute="leading" constant="10" id="fJp-xu-2Zg"/>
                                     <constraint firstAttribute="bottom" secondItem="vzF-JW-f3b" secondAttribute="bottom" constant="10" id="jKR-ca-4h3"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BuU-PE-a6s" customClass="ContainerCard" customModule="total_games" customModuleProvider="target">
+                                <rect key="frame" x="20" y="389.66666666666674" width="374" height="472.33333333333326"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recent Games" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADv-sU-fBU">
+                                        <rect key="frame" x="10" y="9.9999999999999982" width="136.66666666666666" height="23.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IWJ-tr-IZB">
+                                        <rect key="frame" x="10" y="43.333333333333314" width="354" height="419"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.15686274510000001" green="0.16078431369999999" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="ADv-sU-fBU" firstAttribute="leading" secondItem="BuU-PE-a6s" secondAttribute="leading" constant="10" id="2JP-GM-bzM"/>
+                                    <constraint firstItem="IWJ-tr-IZB" firstAttribute="top" secondItem="ADv-sU-fBU" secondAttribute="bottom" constant="10" id="D1a-Zk-gR0"/>
+                                    <constraint firstItem="ADv-sU-fBU" firstAttribute="top" secondItem="BuU-PE-a6s" secondAttribute="top" constant="10" id="FBj-0u-FSG"/>
+                                    <constraint firstItem="IWJ-tr-IZB" firstAttribute="leading" secondItem="BuU-PE-a6s" secondAttribute="leading" constant="10" id="ITC-1g-fKk"/>
+                                    <constraint firstAttribute="bottom" secondItem="IWJ-tr-IZB" secondAttribute="bottom" constant="10" id="d02-EE-mRl"/>
+                                    <constraint firstAttribute="trailing" secondItem="IWJ-tr-IZB" secondAttribute="trailing" constant="10" id="smK-r6-qx1"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="VYi-bs-MAz" firstAttribute="trailing" secondItem="BuU-PE-a6s" secondAttribute="trailing" constant="20" id="6dH-LE-cc1"/>
                             <constraint firstItem="00M-cF-gR2" firstAttribute="leading" secondItem="ttm-tC-1NG" secondAttribute="leading" id="7ud-zC-kY3"/>
                             <constraint firstItem="z2w-IC-s29" firstAttribute="top" secondItem="00M-cF-gR2" secondAttribute="bottom" id="8gt-GS-eS6"/>
                             <constraint firstItem="00M-cF-gR2" firstAttribute="top" secondItem="ttm-tC-1NG" secondAttribute="top" id="9ef-rc-eQR"/>
                             <constraint firstItem="VYi-bs-MAz" firstAttribute="trailing" secondItem="zU1-gv-EQ5" secondAttribute="trailing" constant="20" id="EPx-Lq-TOw"/>
                             <constraint firstItem="zU1-gv-EQ5" firstAttribute="leading" secondItem="VYi-bs-MAz" secondAttribute="leading" constant="20" id="Iva-iQ-viO"/>
+                            <constraint firstItem="zU1-gv-EQ5" firstAttribute="height" secondItem="ttm-tC-1NG" secondAttribute="height" multiplier="0.25" id="Jnv-1u-jIs"/>
                             <constraint firstItem="00M-cF-gR2" firstAttribute="height" secondItem="ttm-tC-1NG" secondAttribute="height" multiplier="0.1" id="K6n-S8-f0o"/>
+                            <constraint firstItem="BuU-PE-a6s" firstAttribute="leading" secondItem="VYi-bs-MAz" secondAttribute="leading" constant="20" id="Nms-Gm-iXx"/>
+                            <constraint firstItem="BuU-PE-a6s" firstAttribute="top" secondItem="zU1-gv-EQ5" secondAttribute="bottom" constant="10" id="R0g-5M-iI8"/>
                             <constraint firstItem="z2w-IC-s29" firstAttribute="leading" secondItem="ttm-tC-1NG" secondAttribute="leading" constant="10" id="U0y-8y-mrj"/>
                             <constraint firstItem="VYi-bs-MAz" firstAttribute="trailing" secondItem="z2w-IC-s29" secondAttribute="trailing" constant="10" id="UDH-6Q-2LK"/>
+                            <constraint firstItem="VYi-bs-MAz" firstAttribute="bottom" secondItem="BuU-PE-a6s" secondAttribute="bottom" id="qXD-ks-8KQ"/>
                             <constraint firstItem="zU1-gv-EQ5" firstAttribute="top" secondItem="z2w-IC-s29" secondAttribute="bottom" constant="10" id="qzT-S3-x1a"/>
                             <constraint firstAttribute="trailing" secondItem="00M-cF-gR2" secondAttribute="trailing" id="zWu-2H-jwZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VYi-bs-MAz"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="vzF-JW-f3b" id="HBz-r3-f5G"/>
+                        <outlet property="tableView" destination="IWJ-tr-IZB" id="Q8o-5a-B5Q"/>
+                        <outlet property="titleLabel" destination="iC5-pk-DCj" id="wAv-ea-lbz"/>
+                        <outlet property="yearLabel" destination="8nC-fX-MPD" id="mQd-Am-0vx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XBB-sS-8fz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -13,20 +13,16 @@ class HomeVC: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var prevButton: UIButton!
-    @IBOutlet weak var header: UIView!
-    @IBOutlet weak var footer: UIView!
+    @IBOutlet weak var loading: UIView!
     
+    private var refreshControl = UIRefreshControl()
     private var _categoeries: [Category] = []
     private var _currentPage: Int = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView.register(CardCell.nib(), forCellWithReuseIdentifier: CardCell.identifier)
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        
-        getData(page: _currentPage)
+        initialSetup()
     }
     
     @IBAction func nextPage(_ sender: UIButton) {
@@ -39,12 +35,32 @@ class HomeVC: UIViewController {
         getData(page: _currentPage)
     }
     
+    @objc func refreshVC() {
+        getData(page: _currentPage)
+        collectionView.refreshControl?.endRefreshing()
+    }
+    
+    private func initialSetup() {
+        if _categoeries.count > 0 {
+            loading.isHidden = true
+        }
+        
+        collectionView.register(CardCell.nib(), forCellWithReuseIdentifier: CardCell.identifier)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
+        getData(page: _currentPage)
+        refreshControl.addTarget(self, action: #selector(refreshVC), for: UIControl.Event.valueChanged)
+        collectionView.refreshControl = refreshControl
+    }
+    
     private func getData(page: Int) {
         Api.shared.page = page
         Api.shared.getCategory { (res) in
             switch res {
             case .success(let data):
                 DispatchQueue.main.async {
+                    self.loading.isHidden = true
                     self._categoeries = data.0
                     self.collectionView.reloadData()
                     if data.1 != nil {
@@ -85,9 +101,12 @@ extension HomeVC: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
         Api.shared.category = _categoeries[indexPath.row].id
-        guard let gameListVC = storyboard?.instantiateViewController(withIdentifier: "GamesListVC") else { return }
+        guard let gameListVC = storyboard?.instantiateViewController(withIdentifier: "GamesListVC") as? GamesListVC else { return }
         
-        self.present(gameListVC, animated: true, completion: nil)
+        
+        let name = _categoeries[indexPath.row].name
+        gameListVC.setTitleAndYear(title: "\(name) Games", year: "Top Games")
+        self.presentNext(gameListVC)
     }
     
 }
@@ -101,7 +120,7 @@ extension HomeVC: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardCell.identifier, for: indexPath) as! CardCell
         
         let category = _categoeries[indexPath.row]
-        cell.configure(with: category, type: .category)
+        cell.configure(content: category, type: .category)
         return cell
     }
 }

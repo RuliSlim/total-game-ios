@@ -14,6 +14,7 @@ struct Games: Decodable {
     let background_image: String
     let rating: Double?
     let short_screenshots: [Screenshot]?
+    let released: String
 }
 
 struct Screenshot: Decodable {

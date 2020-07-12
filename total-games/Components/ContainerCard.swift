@@ -14,6 +14,16 @@ class ContainerCard: UIView {
     override func prepareForInterfaceBuilder() {
         setup()
     }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setup()
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        setup()
+    }
 
     private func setup() {
         self.round(corners: [.allCorners], cornerRadius: 20)

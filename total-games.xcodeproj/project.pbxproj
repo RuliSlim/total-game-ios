@@ -20,6 +20,9 @@
 		844BE53C24B9DBFC001A5F6A /* Footer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844BE53B24B9DBFC001A5F6A /* Footer.swift */; };
 		844BE53E24B9E30F001A5F6A /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844BE53D24B9E30F001A5F6A /* Games.swift */; };
 		845B30F724B74692006FFD23 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B30F624B74692006FFD23 /* Api.swift */; };
+		84908B3824BAD22F005A22DA /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84908B3724BAD22F005A22DA /* ViewControllerExtension.swift */; };
+		8490959124BAE26F00B0005A /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8490958F24BAE26F00B0005A /* TableCell.swift */; };
+		8490959224BAE26F00B0005A /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8490959024BAE26F00B0005A /* TableCell.xib */; };
 		849DF84624B9C7B800ADA227 /* ContainerCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849DF84524B9C7B800ADA227 /* ContainerCard.swift */; };
 		849DF84924B9C8CF00ADA227 /* ContentEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849DF84824B9C8CF00ADA227 /* ContentEnum.swift */; };
 		84C7CBB024B85D1E009B0F42 /* FooterCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C7CBAE24B85D1E009B0F42 /* FooterCard.swift */; };
@@ -49,6 +52,9 @@
 		844BE53B24B9DBFC001A5F6A /* Footer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Footer.swift; sourceTree = "<group>"; };
 		844BE53D24B9E30F001A5F6A /* Games.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
 		845B30F624B74692006FFD23 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		84908B3724BAD22F005A22DA /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
+		8490958F24BAE26F00B0005A /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
+		8490959024BAE26F00B0005A /* TableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
 		849DF84524B9C7B800ADA227 /* ContainerCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerCard.swift; sourceTree = "<group>"; };
 		849DF84824B9C8CF00ADA227 /* ContentEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentEnum.swift; sourceTree = "<group>"; };
 		84C7CBAE24B85D1E009B0F42 /* FooterCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterCard.swift; sourceTree = "<group>"; };
@@ -86,6 +92,7 @@
 				842A6EA024B985BF007197DD /* Header.swift */,
 				842A6EA224B989EC007197DD /* Background.swift */,
 				849DF84524B9C7B800ADA227 /* ContainerCard.swift */,
+				8490958F24BAE26F00B0005A /* TableCell.swift */,
 				844BE53B24B9DBFC001A5F6A /* Footer.swift */,
 			);
 			path = Components;
@@ -149,6 +156,7 @@
 				8402364C24B702A400BCEA7E /* CardCell.xib */,
 				84F3AAF624B6F90A0011B67F /* Main.storyboard */,
 				84F3AAFB24B6F90C0011B67F /* LaunchScreen.storyboard */,
+				8490959024BAE26F00B0005A /* TableCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -176,6 +184,7 @@
 			children = (
 				842A6EA424B9A081007197DD /* ViewExtension.swift */,
 				844BE53924B9CECF001A5F6A /* IntExtension.swift */,
+				84908B3724BAD22F005A22DA /* ViewControllerExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -270,6 +279,7 @@
 				84F3AAFA24B6F90C0011B67F /* Assets.xcassets in Resources */,
 				84C7CBB124B85D1E009B0F42 /* FooterCard.xib in Resources */,
 				84F3AAF824B6F90A0011B67F /* Main.storyboard in Resources */,
+				8490959224BAE26F00B0005A /* TableCell.xib in Resources */,
 				8402364E24B702A400BCEA7E /* CardCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,9 +343,11 @@
 				844BE53A24B9CECF001A5F6A /* IntExtension.swift in Sources */,
 				84010E7D24B732180070FD00 /* CardBody.swift in Sources */,
 				842A6EA124B985BF007197DD /* Header.swift in Sources */,
+				8490959124BAE26F00B0005A /* TableCell.swift in Sources */,
 				84F3AAF324B6F90A0011B67F /* SceneDelegate.swift in Sources */,
 				84C7CBB024B85D1E009B0F42 /* FooterCard.swift in Sources */,
 				84010E7F24B7328A0070FD00 /* CardImage.swift in Sources */,
+				84908B3824BAD22F005A22DA /* ViewControllerExtension.swift in Sources */,
 				845B30F724B74692006FFD23 /* Api.swift in Sources */,
 				8402364D24B702A400BCEA7E /* CardCell.swift in Sources */,
 				842A6EA324B989EC007197DD /* Background.swift in Sources */,

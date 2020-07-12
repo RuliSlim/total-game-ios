@@ -23,7 +23,54 @@ class CardCell: UICollectionViewCell {
         dropShadow()
     }
     
-    private func setup(name: String, games: String) {
+    static func nib() -> UINib {
+        return UINib(nibName: "CardCell", bundle: nil)
+    }
+    
+    public func configure(content: Any, type: ContentType) {
+        switch type {
+        case .category:
+            forCategory(content: content as! Category)
+        case .games:
+            forGames(content: content as! Games)
+        }
+    }
+    
+    private func forCategory(content: Category) {
+        self.cardImage.load.request(with: content.image_background)
+        let game = content.games_count.convertToStringNumber()
+        setup(name: content.name, games: game, type: .category)
+    }
+    
+    private func forGames(content: Games) {
+        self.cardImage.load.request(with: content.background_image)
+        
+        let stringRating = rating(rating: content.rating ?? 0)
+        setup(name: content.name, games: stringRating, type: .games)
+    }
+    
+    private func rating(rating: Double) -> String {
+        var stringRating = ""
+        let rating = rating
+        let oneStar = "★"
+        let emptyStar = "☆"
+        
+        switch rating {
+        case 0 ... 1:
+            stringRating = "Rating: \(oneStar)\(emptyStar)\(emptyStar)\(emptyStar)\(emptyStar)"
+        case 1 ... 2:
+            stringRating = "Rating: \(oneStar)\(oneStar)\(emptyStar)\(emptyStar)\(emptyStar)"
+        case 2 ... 3:
+            stringRating = "Rating: \(oneStar)\(oneStar)\(oneStar)\(emptyStar)\(emptyStar)"
+        case 3 ... 4:
+            stringRating = "Rating: \(oneStar)\(oneStar)\(oneStar)\(oneStar)\(emptyStar)"
+        default:
+            stringRating = "Rating: \(oneStar)\(oneStar)\(oneStar)\(oneStar)\(oneStar)"
+        }
+        return stringRating
+    }
+    
+    private func setup(name: String, games: String, type: ContentType) {
         containerText.addArrangedSubview(self.title)
         containerText.addArrangedSubview(totalGames)
         
@@ -34,23 +81,12 @@ class CardCell: UICollectionViewCell {
         totalGames.font = UIFont(name: "AmericanTypewriter-Condensed", size: 16)
         
         title.text = "\(name)"
-        totalGames.text = "Games: \(games)"
-    }
-    
-    public func configure(with card: Category, type: ContentType) {
         switch type {
         case .category:
-            self.cardImage.load.request(with: card.image_background)
-            let game = card.games_count.convertToStringNumber()
-            setup(name: card.name, games: game)
+            totalGames.text = "Games: \(games)"
         case .games:
-            print("s")
+            totalGames.text = "\(games)"
         }
-    }
-    
-    
-    static func nib() -> UINib {
-        return UINib(nibName: "CardCell", bundle: nil)
     }
     
     func dropShadow() {
