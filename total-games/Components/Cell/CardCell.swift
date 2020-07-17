@@ -75,10 +75,10 @@ class CardCell: UICollectionViewCell {
         containerText.addArrangedSubview(totalGames)
         
         title.translatesAutoresizingMaskIntoConstraints = false
-        title.font = UIFont(name: "AmericanTypewriter-Bold", size: 18)
+        title.font = UIFont(name: "AvernirNext-Bold", size: 18)
         
         totalGames.translatesAutoresizingMaskIntoConstraints = false
-        totalGames.font = UIFont(name: "AmericanTypewriter-Condensed", size: 16)
+        totalGames.font = UIFont(name: "AvenirNext-Condensed", size: 16)
         
         title.text = "\(name)"
         switch type {

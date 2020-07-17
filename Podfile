@@ -9,5 +9,5 @@ target 'total-games' do
   
   pod 'ImageLoader'
   pod 'GradientView'
-  
+
 end

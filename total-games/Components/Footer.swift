@@ -27,6 +27,14 @@ class Footer: GradientView {
             #colorLiteral(red: 0.9647058824, green: 0.2705882353, blue: 0.3764705882, alpha: 1),
             #colorLiteral(red: 0.7843137255, green: 0.1882352941, blue: 0.8274509804, alpha: 1)
         ]
+        let deviceHeight = UIScreen.main.bounds.height
+        let deviceWidth = UIScreen.main.bounds.width
+        
+        NSLayoutConstraint.activate([
+            self.widthAnchor.constraint(equalToConstant: deviceWidth),
+            self.heightAnchor.constraint(equalToConstant: deviceHeight * 0.1)
+        ])
+        
         self.round(corners: [.topLeft, .topRight], cornerRadius: 20)
     }
 }

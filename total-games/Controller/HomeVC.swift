@@ -103,6 +103,9 @@ extension HomeVC: UICollectionViewDelegate {
         Api.shared.category = _categoeries[indexPath.row].id
         guard let gameListVC = storyboard?.instantiateViewController(withIdentifier: "GamesListVC") as? GamesListVC else { return }
         
+        let date = Date()
+        let calendar = Calendar.current
+        Api.shared.year = calendar.component(.year, from: date)
         
         let name = _categoeries[indexPath.row].name
         gameListVC.setTitleAndYear(title: "\(name) Games", year: "Top Games")
@@ -127,7 +130,7 @@ extension HomeVC: UICollectionViewDataSource {
 
 extension HomeVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = view.frame.size.width / 2 - 20
+        let width = view.frame.size.width / 2 - 30
         let height = collectionView.frame.size.height / 3 - 15
         return CGSize(width: width, height: height)
     }
