@@ -15,8 +15,8 @@ class CardCell: UICollectionViewCell {
     @IBOutlet weak var cardImage: UIImageView!
     @IBOutlet weak var containerText: UIStackView!
     
-    var totalGames: UILabel = UILabel()
-    var title: UILabel = UILabel()
+    private var totalGames: UILabel = UILabel()
+    private var title: UILabel = UILabel()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -34,6 +34,7 @@ class CardCell: UICollectionViewCell {
         case .games:
             forGames(content: content as! Games)
         }
+        self.round(corners: [.bottomRight, .topLeft], cornerRadius: 10)
     }
     
     private func forCategory(content: Category) {
@@ -76,9 +77,11 @@ class CardCell: UICollectionViewCell {
         
         title.translatesAutoresizingMaskIntoConstraints = false
         title.font = UIFont(name: "AvernirNext-Bold", size: 18)
+        title.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
         totalGames.translatesAutoresizingMaskIntoConstraints = false
         totalGames.font = UIFont(name: "AvenirNext-Condensed", size: 16)
+        totalGames.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
         title.text = "\(name)"
         switch type {
@@ -91,17 +94,16 @@ class CardCell: UICollectionViewCell {
     
     func dropShadow() {
         self.layer.masksToBounds = false
-        self.layer.shadowColor = UIColor.black.cgColor
-        self.layer.shadowOpacity = 0.4
-        self.layer.shadowOffset = .init(width: 5, height: 5)
+        self.layer.shadowColor = #colorLiteral(red: 0.9882352941, green: 0.337254902, blue: 0.09411764706, alpha: 1)
+        self.layer.shadowOpacity = 1
+        self.layer.shadowOffset = .init(width: 15, height: 15)
         self.layer.shadowRadius = 3
-        self.layer.cornerRadius = 10
+        self.round(corners: [.bottomRight, .topLeft], cornerRadius: 10)
     }
     
     func didTapped() {
         self.layer.shadowColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
         self.layer.masksToBounds = false
-        self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowOpacity = 0
         self.layer.shadowOffset = .init(width: 0, height: 0)
         self.layer.shadowRadius = 0

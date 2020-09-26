@@ -30,6 +30,6 @@ class CardImage: UIImageView {
     }
     
     private func setUp() {
-        self.layer.cornerRadius = 10
+        self.round(corners: [.bottomRight, .topLeft], cornerRadius: 10)
     }
 }

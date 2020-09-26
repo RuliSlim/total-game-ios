@@ -17,24 +17,37 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YeI-7H-PLX" customClass="CardBody" customModule="total_games" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="411" height="353"/>
+                        <rect key="frame" x="0.0" y="5" width="411" height="343"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pc" translatesAutoresizingMaskIntoConstraints="NO" id="vMi-Jx-T4E" customClass="CardImage" customModule="total_games" customModuleProvider="target">
-                                <rect key="frame" x="10" y="10" width="391" height="247"/>
+                                <rect key="frame" x="0.0" y="0.0" width="411" height="343"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Mn3-hU-CWC">
-                                <rect key="frame" x="10" y="262" width="391" height="86"/>
-                            </stackView>
+                            <view opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cuM-By-0fk" customClass="CardBody" customModule="total_games" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="240" width="411" height="103"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Mn3-hU-CWC">
+                                        <rect key="frame" x="5" y="0.0" width="401" height="103"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Mn3-hU-CWC" secondAttribute="trailing" constant="5" id="PAO-7c-1Md"/>
+                                    <constraint firstItem="Mn3-hU-CWC" firstAttribute="top" secondItem="cuM-By-0fk" secondAttribute="top" id="VzS-k4-tPC"/>
+                                    <constraint firstAttribute="bottom" secondItem="Mn3-hU-CWC" secondAttribute="bottom" id="cUA-sF-9u9"/>
+                                    <constraint firstItem="Mn3-hU-CWC" firstAttribute="leading" secondItem="cuM-By-0fk" secondAttribute="leading" constant="5" id="ywh-cz-6hZ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="Mn3-hU-CWC" firstAttribute="leading" secondItem="YeI-7H-PLX" secondAttribute="leading" constant="10" id="8hJ-pc-339"/>
-                            <constraint firstAttribute="bottom" secondItem="Mn3-hU-CWC" secondAttribute="bottom" constant="5" id="Fpe-b6-U35"/>
-                            <constraint firstAttribute="trailing" secondItem="Mn3-hU-CWC" secondAttribute="trailing" constant="10" id="XRX-jL-rhQ"/>
-                            <constraint firstItem="vMi-Jx-T4E" firstAttribute="height" secondItem="YeI-7H-PLX" secondAttribute="height" multiplier="0.7" id="ZGV-yc-6Ua"/>
-                            <constraint firstAttribute="trailing" secondItem="vMi-Jx-T4E" secondAttribute="trailing" constant="10" id="cNV-la-2Q5"/>
-                            <constraint firstItem="vMi-Jx-T4E" firstAttribute="leading" secondItem="YeI-7H-PLX" secondAttribute="leading" constant="10" id="nKk-0Z-Bn5"/>
-                            <constraint firstItem="vMi-Jx-T4E" firstAttribute="top" secondItem="YeI-7H-PLX" secondAttribute="top" constant="10" id="qDD-Ao-Hqu"/>
-                            <constraint firstItem="Mn3-hU-CWC" firstAttribute="top" secondItem="vMi-Jx-T4E" secondAttribute="bottom" constant="5" id="rnF-S4-li6"/>
+                            <constraint firstItem="cuM-By-0fk" firstAttribute="leading" secondItem="YeI-7H-PLX" secondAttribute="leading" id="5C7-68-tkh"/>
+                            <constraint firstItem="cuM-By-0fk" firstAttribute="height" secondItem="YeI-7H-PLX" secondAttribute="height" multiplier="0.3" id="WJf-8K-T1b"/>
+                            <constraint firstItem="vMi-Jx-T4E" firstAttribute="height" secondItem="YeI-7H-PLX" secondAttribute="height" id="ZGV-yc-6Ua"/>
+                            <constraint firstAttribute="trailing" secondItem="vMi-Jx-T4E" secondAttribute="trailing" id="cNV-la-2Q5"/>
+                            <constraint firstAttribute="bottom" secondItem="cuM-By-0fk" secondAttribute="bottom" id="it1-5R-VXL"/>
+                            <constraint firstItem="vMi-Jx-T4E" firstAttribute="leading" secondItem="YeI-7H-PLX" secondAttribute="leading" id="nKk-0Z-Bn5"/>
+                            <constraint firstAttribute="trailing" secondItem="cuM-By-0fk" secondAttribute="trailing" id="nRY-Wg-ngI"/>
+                            <constraint firstItem="vMi-Jx-T4E" firstAttribute="top" secondItem="YeI-7H-PLX" secondAttribute="top" id="qDD-Ao-Hqu"/>
+                            <constraint firstItem="vMi-Jx-T4E" firstAttribute="bottom" secondItem="YeI-7H-PLX" secondAttribute="bottom" id="rnF-S4-li6"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -42,9 +55,13 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="YeI-7H-PLX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="9mL-ut-v3d"/>
+                <constraint firstItem="YeI-7H-PLX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="JH9-G7-CO3"/>
+                <constraint firstItem="YeI-7H-PLX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="UCU-dG-8Vp"/>
+                <constraint firstAttribute="trailing" secondItem="YeI-7H-PLX" secondAttribute="trailing" constant="5" id="Znj-4I-0Nj"/>
                 <constraint firstItem="YeI-7H-PLX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="btl-cs-x1T"/>
                 <constraint firstAttribute="trailing" secondItem="YeI-7H-PLX" secondAttribute="trailing" id="jIe-pd-a2T"/>
                 <constraint firstAttribute="bottom" secondItem="YeI-7H-PLX" secondAttribute="bottom" id="lgg-3b-SIk"/>
+                <constraint firstAttribute="bottom" secondItem="YeI-7H-PLX" secondAttribute="bottom" constant="5" id="o70-au-BgA"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="411" height="353"/>

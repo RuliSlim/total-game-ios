@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import TTSegmentedControl
 import GradientView
 
 @IBDesignable

@@ -16,11 +16,13 @@ class CardBody: UIView {
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 		setUp()
+		dropShadow()
 	}
 	
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		setUp()
+		dropShadow()
 	}
 	
 	required init?(coder: NSCoder) {
@@ -29,19 +31,28 @@ class CardBody: UIView {
 	
 	override func prepareForInterfaceBuilder() {
 		setUp()
-		
+		dropShadow()
+	}
+	
+	func dropShadow() {
+			self.layer.masksToBounds = false
+			self.layer.shadowColor = #colorLiteral(red: 0.9882352941, green: 0.337254902, blue: 0.09411764706, alpha: 1)
+			self.layer.shadowOpacity = 1
+			self.layer.shadowOffset = .init(width: 15, height: 15)
+			self.layer.shadowRadius = 3
+			self.round(corners: [.bottomRight, .topLeft], cornerRadius: 10)
 	}
 	
 	private func setUp() {
 		self.insertSubview(gradientView, at: 0)
-		self.layer.cornerRadius = 10
-		gradientView.layer.cornerRadius = 10
+//		self.layer.cornerRadius = 10
+		self.round(corners: [.bottomRight, .topLeft], cornerRadius: 10)
+//		gradientView.layer.cornerRadius = 10
 		gradientView.clipsToBounds = true
 		gradientView.direction = .horizontal
 		gradientView.colors = [
-			#colorLiteral(red: 0.9882352941, green: 0.337254902, blue: 0.09411764706, alpha: 1),
-			#colorLiteral(red: 0.9647058824, green: 0.2705882353, blue: 0.3764705882, alpha: 1),
-			#colorLiteral(red: 0.7843137255, green: 0.1882352941, blue: 0.8274509804, alpha: 1)
+			#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1),
+			#colorLiteral(red: 0.1568627451, green: 0.1607843137, blue: 0.2470588235, alpha: 1)
 		]
 		gradientView.translatesAutoresizingMaskIntoConstraints = false
 		NSLayoutConstraint.activate([

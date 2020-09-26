@@ -33,7 +33,7 @@ class TableCell: UITableViewCell {
     
     func configure(game: Games) {
         titleCell.text = game.name
-        releasedCell.text = "Released: \(game.released)"
+        releasedCell.text = "Released: \(game.released ?? "TBA")"
         ratingCell.text = rating(rating: game.rating ?? 0)
         imageCell.load.request(with: game.background_image)
     }

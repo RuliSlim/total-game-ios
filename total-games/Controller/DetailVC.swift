@@ -17,6 +17,7 @@ class DetailVC: UIViewController {
     
     // MARK: -Body
     @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var containerBody: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var aboutGame: UILabel!
     @IBOutlet weak var detailsGame: UIStackView!
@@ -135,7 +136,7 @@ class DetailVC: UIViewController {
         releaseDate.text = _game.tba ? "TBA" : _game.released
         platforms.text = _game.getPlatform()
         
-        scrollView.contentLayoutGuide.bottomAnchor.constraint(equalTo: detailsGame.bottomAnchor).isActive = true
+        scrollView.contentLayoutGuide.bottomAnchor.constraint(equalTo: containerBody.bottomAnchor).isActive = true
     }
     
     private func setupAbout() {

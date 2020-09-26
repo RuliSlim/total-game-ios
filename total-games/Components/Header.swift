@@ -23,9 +23,8 @@ class Header: GradientView {
     private func setup() {
         self.direction = .horizontal
         self.colors = [
-            #colorLiteral(red: 0.9882352941, green: 0.337254902, blue: 0.09411764706, alpha: 1),
-            #colorLiteral(red: 0.9647058824, green: 0.2705882353, blue: 0.3764705882, alpha: 1),
-            #colorLiteral(red: 0.7843137255, green: 0.1882352941, blue: 0.8274509804, alpha: 1)
+            #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1),
+            #colorLiteral(red: 0.1568627451, green: 0.1607843137, blue: 0.2470588235, alpha: 1)
         ]
         let deviceHeight = UIScreen.main.bounds.height
         let deviceWidth = UIScreen.main.bounds.width

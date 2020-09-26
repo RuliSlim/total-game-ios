@@ -94,10 +94,7 @@ class ContainerCard: UIView {
     }
 
     private func setup() {
-        self.round(corners: [_topRight, _topLeft, _bottomRight, _bottomLeft], cornerRadius: _radius)
-//        self.addBorder(corners: _borders, thickness: 3, color: #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1), offset: 1)
-//        self.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-//        self.layer.borderWidth = 10
+        self.round(corners: [_topLeft, _bottomRight], cornerRadius: _radius)
     }
 
 }
